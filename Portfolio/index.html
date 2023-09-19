@@ -1,0 +1,135 @@
+<!-- um zu starten, fängt man mit einem "!" an, welcher den head codet -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio | Daniel P</title>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="images/logo.png">
+            </a>
+        </div>
+
+        <!-- ul means unordered list; is for creating lists -->
+        <ul class="nav-links">
+            <!-- li means list item -->
+            <!-- a stands for anchor element, href is an attribute with the placeholder "#"
+                (often used, will be changed to links) -->
+            <li class="link"><a href="#">Home</a></li>
+            <li id="link1" class="link"><a href="#">Features</a></li>
+            <li id="link2" class="link"><a href="#">Uni</a></li>
+            <li id="link3" class="link"><a href="#">About</a></li>
+        </ul>
+        <button class="btn">That´s me</button>
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h4>Create your site like a Pro</h4>
+            <H1> I´m<span> Daniel</span>, random Guy </H1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Quam praesentium veniam quo eveniet qui minima consequatur 
+                laborum totam dignissimos magni esse, architecto rem, libero 
+                temporibus expedita vel dolores hic ullam.
+            </p>
+            <button class="btn"> Free Cube</button>
+        </div>
+
+        <div class="image">
+            <img src="images/header.png">
+        </div>  
+    </header>
+
+    <section class="container">
+        <h2 class='header'>Features</h2>
+        <div class="features">
+            <div class="card">
+                <span><i class="ri-cactus-line"></i></span>
+                <h4>Free Cactus</h4>
+                <p>
+                    My Cactus are awesome! 
+                </p>
+            </div>
+            <div class="card">
+                <span><i class="ri-infinity-line"></i></span>
+                <h4>Divide with 0</h4>
+                <p>
+                    If you divide a number with 0 you will get  Error
+                </p>
+            </div>
+            <div class="card">
+                <span><i class="ri-ping-pong-line"></i></span>
+                <h4>Sport</h4>
+                <p>
+                    I played for 5 years tabletennis!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="header">Informations about me</h2>
+        <p class="sub-header">
+            Hello there
+        </p>
+        <div class="informations">
+            <p class="card">
+                <i class="ri-checkbox-line"></i>
+                Biomimetics-Student
+            </p>
+            <p class="card">
+                <i class="ri-checkbox-line"></i>
+                playing video games
+            </p>
+            <p class="card">
+                <i class="ri-checkbox-line"></i>
+                reading
+            </p>
+            <p class="card">
+                <i class="ri-checkbox-line"></i>
+                philosophing
+            </p>
+        </div>    
+    </section>
+
+    <footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class='column'>
+            <div class="logo">
+                <img src="images/header.png">
+            </div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur 
+                adipisicing elit. 
+            </p>
+            <div class="socials">
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-youtube-line"></i></a>
+                <a href="#"><i class="ri-snapchat-line"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Copyright © 2023
+    </div>
+
+    <!-- this line of codes gets the "logic"-code
+         from the external file "script.js" -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

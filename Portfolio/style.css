@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,200;0,300;1,500&display=swap');
+
+/* this applies to all elements on the page; resetting margin and paging to 0 in case
+ they have other stuff from browser */
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+/* deleats the underline of the links */
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #18181B;
+}
+
+/* adjusting the navigation things from the html-file */
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem; /*rem stands for root em; 1rem stands for 
+                        the same measurements as the current used font, e.g. 1rem = 16px*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* scales the png */
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* styles the anchor elements from the class "link"; styles the navigation links */
+.link a{
+    position: relative; /*"relative" is used for creating effects or positionings within a container*/
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+/* styling the pseudo-elements that are descendants of elements with the class "link" */
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease; /* transition effect for the pseudo-element; "ease" for smooth visual transition effect, when the properties of the element change (e.g. width) */ 
+}
+
+/* this is for the sze of the little blue line when hovering the different links */
+.link a:hover::after{
+    width: 70%;
+}
+
+/* customising the button "That´s me" */
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* changes the color of the button after hovering */
+.btn:hover{
+    background-color: #1e40af;
+}
+
+/* the following commands change the different classes
+ and divisions written in the  header "container" */
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+/* this is for the cool art of "Daniel" */
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.05px #b71818;
+}
+header .content p{
+    margin-bottom: 2rem; /*does a space between text and button "Free Cube"*/
+    color: #ccc;
+}
+
+header .image{
+    position: relative;
+}
+
+/* adjusting the blue circle */
+header .image::before{
+    content: "o"; /* you can place different letters for the form*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+/* scaling the image with the programmer */
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all 0.5s ease;
+    /* color: #b71818;   */
+}
+
+.features .card:hover{
+    background-color: #3e3d3d;
+    border-color: #ccc;
+}
+
+/* style of the icons in the feature boxes */
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 0.5rem; /* gap between Icon and text*/
+    font-size: 1.5rem;
+    color: #ccc;
+    border-radius: 15px;
+}
+
+.features .card h4{
+    color: #ccc;
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+/* style the text  off the features*/
+.features .card p{
+    color: #c2bebe;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccd1c4;
+}
+
+.informations{
+    color: #8d92a2;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 1rem;   
+}
+
+/* style of the checkbox */
+.informations .card i{
+    color: #538e80bb; 
+    background: transparent;
+}
+
+.informations:hover{
+    background-color: #465a5fbb;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    border-color: #3e3d3d;
+    transition:  all 0.5s ease;
+}
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* um an das Logo zu bearbeiten, muss man die Klasse column benennen */
+footer .column .logo{
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+footer .column p{
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    color: #ccc;
+    border: 1px solid;
+    border-radius: 100%;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    transition: all 0.5 ease;
+}
+
+footer .column .socials a:hover{
+    color: #ccc;
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    color: #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (width < 900px) {
+        .nav-links{
+            display: none;
+        }
+        header{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        header .image{
+            grid-area: 1/1/2/2;
+        }
+        .features{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .informations{
+            grid-template-columns: repeat(2, 2fr);
+        }
+        footer{
+            grid-template-columns: 1fr 200px;
+        }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .informations{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
