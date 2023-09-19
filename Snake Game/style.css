@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;1,500&display=swap');
+
+/* sets some default styles for all elements on the web */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+
+    /* flex because it allows you to align/distribute elements in the box */
+    /* the body will behave like a flex container */
+    display: flex;
+
+    /* aligns the child elements of the body vertically along the cross-axis */
+    align-items: center;
+    justify-content: center;
+
+    /* vh=viewport height unit (corresponds to the visible area of the browsers window) */
+    min-height: 100vh;
+
+    background: #e3f2fd;
+}
+
+/* styling the elements in the wrapper and the wrapper himself */
+.wrapper{
+    /* vmin (relative measurement unit that represents the smaller of the viewport´s
+    width and height */
+    width: 65vmin;
+    height: 70vmin;
+
+    /* makes the wrapper to a flex container, which allows to use the flexbox layout properties
+    to control the arrangements of the child elements */
+    display: flex;
+
+    /* hides any content which overflows the boundaries of the wrapper */
+    overflow: hidden;
+
+    /* child elements inside the wrapper will be  stacked vertically, one below another */
+    flex-direction: column;
+
+    /* within the flex container this centers the child elements on the vertical and horizontal axis */
+    justify-content: center;
+
+    background: #293447;
+
+    /* rounds the corners of the box */
+    border-radius: 5px;
+
+    /* adds a shadow to the box. horizontal offset (0), vertical offset (20px), blur (40px),
+    color with RGBA (red,green,blue,alpha */
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+
+/* styling the score and high-score text */
+.game-details{
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    /* creates space between text and box-boundaries */
+    /* 20px 27px represent the top/bot and left/right padding */
+    padding: 20px 27px;
+    display: flex;
+
+    /* creates space between the child elements */
+    justify-content: space-between;
+}
+
+.play-board{
+    /* the play-board will take up the full place of the parent container */
+    height: 100%;
+    width: 100%;
+
+    /* creates a grid layout for the child elements */
+    display: grid;
+    background: #212837;
+
+    /* creates the field for the game */
+    /* creates a grid with 30 rows and 30 columns with equal fraction of available space (1fr) */
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+/* color of the food */
+.play-board .food{
+    background: #ff003d;
+}
+
+/* color of the head of the snake */
+.play-board .head{
+    background: #60cbff;
+}
+
+.controls{
+    /* controls are hidden. often used to hide elements on the webpage and show
+    it later with javascript or smth else */
+    display: none;
+    justify-content: space-between;
+}
+
+.controls i{
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+
+    /* sets the width to 25% of the parent width */
+    width: calc(100% / 4);
+
+    /* changes the mouse cursor to a pointer when hovering over the <i>elements */
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
+
+/* media query that specifies a set of rules which are applied for screens smaller than 800px in width */
+/* such things are used for webpages which can adapt to different screen sizes */
+/* all things written in there will apply when the screen-width is smaller than 800px */
+@media screen and (max-width: 800px) {
+    .wrapper{
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controls{
+        display: flex;
+    }
+
+    .controls i{
+        padding: 15px 0;
+        font-size: 1rem;
+    }  
+}
